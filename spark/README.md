@@ -43,7 +43,7 @@ RMSE: Root Mean Square Error`
 
 RMSE:  255.09 - This shows that the average error of the prediction is 255.09$, which, since we're examining cost of living, with most figures ranging in 5 digits, is a small margin of error and quite accurate.
 
-r2:  0.9952 - This shows that over 99.5% of the variation in the data is explained by the given features. 
+R^2:  0.9952 - This shows that over 99.5% of the variation in the data is explained by the given features. 
 
 ### Training Output
 
