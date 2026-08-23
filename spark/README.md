@@ -54,7 +54,11 @@ Explain what the resulting values indicate about model performance.
 Document the exact `spark-submit` command used to submit the PySpark application through YARN.
 
 ```bash
-# Paste your spark-submit command here
+spark-submit \
+  --master yarn \
+  --deploy-mode client \
+  --name econ_metrics \
+  processing.py
 ```
 
 Briefly describe the successful execution and any important log or output information.
