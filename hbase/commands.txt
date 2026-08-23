@@ -1,10 +1,5 @@
-# DSC 650 Portfolio Starter
-# Replace these comments with representative HBase commands from your project.
-#
-# Suggested examples:
-#   create ...
-#   put ...
-#   get ...
-#   scan ...
-#
-# Add brief comments so a reviewer understands what each group of commands demonstrates.
+# This command creates an empty table called 'econ_metrics' with a column family 'cf'
+create 'econ_metrics', 'cf'
+
+# This command shows the contents of the scanned table
+scan 'econ_metrics'
