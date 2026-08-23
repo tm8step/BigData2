@@ -1,14 +1,17 @@
--- DSC 650 Portfolio Starter
--- Replace this file with the Hive DDL from your final project.
---
--- Before publishing:
---   1. Remove credentials or environment-specific secrets.
---   2. Add short comments explaining important tables.
---   3. Keep the SQL that best demonstrates your work.
+-- This is the SQL code used to create and load the table into Hive.  It is launched from inside Hive.
 
--- Example structure only:
--- CREATE EXTERNAL TABLE your_table (
---     id STRING,
---     ...
--- )
--- STORED AS ...;
+CREATE TABLE econdata_ilwi(
+`case_id` INT,
+`state_abv` STRING,
+`county` STRING,
+`housing` FLOAT,
+`total_cost` FLOAT,
+`min_wage` FLOAT,
+`taxes` FLOAT,
+`metro_level` INT
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+LOCATION '/data'
+tblproperties("skip.header.line.count"="1");
