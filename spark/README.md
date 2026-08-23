@@ -61,7 +61,7 @@ spark-submit \
   processing.py
 ```
 
-My Spark job was successful.  In my case it produced this log:  tracking URL: http://master:8088/proxy/application_1787506831922_0004/
+My Spark job was successful.  In my case it produced this log:  `tracking URL: http://master:8088/proxy/application_1787506831922_0004/`
 
 ![Spark Submit Output](screenshots/spark-submit-output.png)
 
