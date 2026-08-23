@@ -85,4 +85,4 @@ yarn logs -applicationId application_1787506831922_0004
 
 List the model-performance metrics written by Spark into HBase and explain how the application connects the machine learning stage to the final persistence layer.
 
-**PySpark source files:** [`processing.py`](processing.py) and/or [`analysis.py`](analysis.py)
+**PySpark source files:** [`processing.py`](processing.py)
