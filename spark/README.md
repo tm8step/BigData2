@@ -61,13 +61,13 @@ spark-submit \
   processing.py
 ```
 
-Briefly describe the successful execution and any important log or output information.
+My Spark job was successful.  In my case it produced this log:  tracking URL: http://master:8088/proxy/application_1787506831922_0004/
 
 ![Spark Submit Output](screenshots/spark-submit-output.png)
 
 ## Spark Log
 
-I verified the yarn logs with this command:
+I verified the YARN logs with this command:
 
 ```bash
 yarn logs -applicationId application_1787506831922_0004
