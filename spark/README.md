@@ -65,7 +65,7 @@ Briefly describe the successful execution and any important log or output inform
 
 ![Spark Submit Output](screenshots/spark-submit-output.png)
 
-# Spark Log
+## Spark Log
 
 ![Spark Submit Log](screenshots/spark-submit-logs.png)
 
