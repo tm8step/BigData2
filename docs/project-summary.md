@@ -25,9 +25,12 @@ Spark execution is submitted through **YARN**.
 ## Dataset
 
 **Dataset name:** [econdata_ilwi.csv]  
-**GitHub direct URL:** [Enter direct/raw dataset URL]
+**GitHub direct URL:** [https://raw.githubusercontent.com/tm8step/BigData2/refs/heads/main/sample-data/econdata_ilwi.csv]
 
-Briefly explain what the dataset contains and why it is appropriate for the selected Spark MLlib workflow.
+It has 3 id columns:  'case_id' INT, 'state_abv' STR and 'county' STR
+It has 5 economic descriptive indicators, 'housing' FLOAT, 'total_cost' FLOAT, 'min_wage' FLOAT, 'taxes' FLOAT and 'metro_level' INT
+
+It is good for a machine learning model because the economic descriptors affect the target Cost of Living in various ways directly and indirectly.
 
 ## Environment Setup
 
