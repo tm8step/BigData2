@@ -67,6 +67,12 @@ Briefly describe the successful execution and any important log or output inform
 
 ## Spark Log
 
+I verified the yarn logs with this command:
+
+```bash
+yarn logs -applicationId application_1787506831922_0004
+```
+
 ![Spark Submit Log](screenshots/spark-submit-logs.png)
 
 ## HBase Output
