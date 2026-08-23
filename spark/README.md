@@ -10,24 +10,25 @@ Apache Spark MLlib provides the distributed processing and machine learning laye
 
 Explain what data Spark reads from Hive and which fields are used by the machine learning workflow.
 
+Spark reads the feature columns 'housing', 'min_wage', 'taxes', and 'metro_level' to develop a formula for the target value 'total_cost' via linear regression. 
+
 ## Data Preparation & Transformations
 
 Describe the important preprocessing or transformation steps performed before model training.
 
-Examples may include:
+Out of the 8 columns in the data, I chose the 4 relevant features since they all affect the cost of living in a particular county in different ways.  They are the mean cost of housing, the minimum wage, the mean taxes paid and the metropolitan level of the county.
 
-- selecting relevant features;
-- handling missing values;
-- encoding categorical fields;
-- assembling feature vectors;
-- scaling or normalization;
-- creating training and test datasets.
+There were no missing values in the data.
+
+The data was split into training and testing data.  70% of the data was used to train, and 30% of the data was used to test the algorithm.
 
 ## MLlib Algorithm
 
 **Algorithm:** `Linear Regression`
 
 Explain:
+
+Linear Regression was appropriate for this data because it is numerical data where the features contribute to the cost of living in the county in complex ways.
 
 - why this algorithm was appropriate for the selected dataset;
 - what prediction or modeling task it performs;
@@ -37,9 +38,11 @@ Explain:
 
 Summarize the training process and explain the evaluation metric or metrics used.
 
-**Primary evaluation metric(s):** `[Enter metric(s)]`
+**Primary evaluation metric(s):** `r2: coefficient of determination
+RMSE: Root Mean Square Error`
 
-Explain what the resulting values indicate about model performance.
+r2:  0.9952 - This shows that over 99.5% of the variation in the data is explained by the given features. 
+RMSE:  255.09 - This shows that the average error of the prediction is 255.09$, which, since we're examining cost of living, with most figures ranging in 5 digits, is a small margin of error and quite accurate.
 
 ### Training Output
 
