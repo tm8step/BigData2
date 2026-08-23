@@ -6,9 +6,25 @@ Apache Hive provides the structured SQL layer between HDFS storage and the Spark
 
 ## Hive Table Design
 
-**Table name:** `[Enter table name]`
+**Table name:** `econdata_ilwi`
 
-Explain the table schema and the key design choices made for the project dataset, including important column names, data types, and any decisions needed to make the data usable for downstream Spark processing.
+The table has 8 columns with 174 entries.  3 of the columns are id columns, 5 of the columns are economic data columns.  For machine learning purposes, 'total_cost' is the target and 'min_wage', 'housing', 'taxes' and 'metro_level' are features
+
+`case_id` INT,
+
+`state_abv` STRING,
+
+`county` STRING,
+
+`housing` FLOAT, - Average cost of housing in the county
+
+`total_cost` FLOAT, - Average cost of living in the county for a single adult.
+
+`min_wage` FLOAT, - The minimum wage of the county
+
+`taxes` FLOAT, - The average taxes paid in the county
+
+`metro_level` INT - The metropolitan level on a scale of 1-6.  Counties scoring 1 are large metropolitan urban centers with big cities, counties scoring 6 are very rural.
 
 ## SQL Files
 
