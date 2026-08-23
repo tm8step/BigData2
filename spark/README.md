@@ -41,9 +41,9 @@ Summarize the training process and explain the evaluation metric or metrics used
 **Primary evaluation metric(s):** `r2: coefficient of determination
 RMSE: Root Mean Square Error`
 
-RMSE:  255.09 - This shows that the average error of the prediction is 255.09$, which, since we're examining cost of living, with most figures ranging in 5 digits, is a small margin of error and quite accurate.
+RMSE:  263.04 - This shows that the average error of the prediction is 255.09$, which, since we're examining cost of living, with most figures ranging in 5 digits, is a small margin of error and quite accurate.
 
-R^2:  0.9952 - This shows that over 99.5% of the variation in the data is explained by the given features. 
+R^2:  0.9937 - This shows that over 99.37% of the variation in the data is explained by the given features.  This is quite accurate. 
 
 ### Training Output
 
