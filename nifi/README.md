@@ -28,16 +28,18 @@ Describe the important processors used in the final NiFi flow and the role each 
 | Processor / Process Group | Role in the Flow |
 |---|---|
 | Download File | Downloads the file from the Github repository and starts it in the Nifi data Flow|
-| Update File Name | Renames the filename to the given filename in the parameter context |
+| Update File Name | Renames the filename to the given filename in the parameter context.  In this case, the output filename is 'econdata_ilwi.csv' |
 | Write File to HDFS | Writes the data to the HDFS folder given in the parameter context.  In this case, the folder is '/data' |
 
 Explain how data moves from the source URL through NiFi and into HDFS.
 
 ## HDFS Destination
 
-**HDFS path:** `[Enter final HDFS path]`
+**HDFS path:** `/data`
 
 Explain where NiFi writes the dataset and how the destination is used by the next stage of the pipeline.
+
+Nifi writes the dataset to my HDFS drive, in the /data folder.  Here it can be read by other data programs such as Hive for querying.
 
 ## Execution Evidence
 
