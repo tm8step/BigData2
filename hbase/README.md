@@ -8,9 +8,9 @@ The HBase table is created before the Spark job runs, verified with an empty sca
 
 ## Table Design
 
-**Table name:** `[Enter HBase table name]`  
+**Table name:** `econ_metrics`  
 **Row key:** `[Describe the row key]`  
-**Column family/families:** `[Enter column family names]`
+**Column family/families:** `cf`
 
 Explain why the selected row key and column family design are appropriate for the model metrics being stored.
 
