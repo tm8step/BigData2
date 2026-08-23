@@ -1,5 +1,1150 @@
 {
-  "_portfolio_starter": true,
-  "_instructions": "Replace this file with your exported NiFi flow definition if your instructor/course policy allows it.",
-  "_warning": "Do not publish credentials, sensitive parameters, certificates, or secrets."
+{
+	"template": {
+		"description": "",
+		"groupId": "2f172308-01a0-1000-6e02-b8676ef6bf50",
+		"name": "econdata_ilwi nifi template",
+		"snippet": {
+			"connections": [
+				{
+					"id": "10b09528-283d-3286-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"versionedComponentId": "49751ac0-1e25-3961-b4f7-720ded8cbd02",
+					"backPressureDataSizeThreshold": "1 GB",
+					"backPressureObjectThreshold": "10000",
+					"destination": {
+						"groupId": "1abd5cab-a264-3a51-0000-000000000000",
+						"id": "9afbb0e7-ee65-3487-0000-000000000000",
+						"type": "FUNNEL",
+						"versionedComponentId": "38f0acb5-768f-3093-856b-d546f5146f50"
+					},
+					"flowFileExpiration": "0 sec",
+					"labelIndex": "1",
+					"loadBalanceCompression": "DO_NOT_COMPRESS",
+					"loadBalancePartitionAttribute": "",
+					"loadBalanceStatus": "LOAD_BALANCE_NOT_CONFIGURED",
+					"loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+					"name": "",
+					"selectedRelationships": [
+						"Failure",
+						"No Retry",
+						"Retry"
+					],
+					"source": {
+						"groupId": "1abd5cab-a264-3a51-0000-000000000000",
+						"id": "2f0d76b4-3de2-39b0-0000-000000000000",
+						"type": "PROCESSOR",
+						"versionedComponentId": "14531e3e-d1c1-38f6-9161-a9ecdeabb69f"
+					},
+					"zIndex": "0"
+				},
+				{
+					"id": "16a4c3df-1c37-3985-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"versionedComponentId": "48239779-1a25-399d-a211-82bcbb5188fb",
+					"backPressureDataSizeThreshold": "1 GB",
+					"backPressureObjectThreshold": "10000",
+					"destination": {
+						"groupId": "1abd5cab-a264-3a51-0000-000000000000",
+						"id": "17205f49-e4d3-3439-0000-000000000000",
+						"type": "PROCESSOR",
+						"versionedComponentId": "42ffb181-fe1d-34fd-a8ca-9f31f8c323d6"
+					},
+					"flowFileExpiration": "0 sec",
+					"labelIndex": "1",
+					"loadBalanceCompression": "DO_NOT_COMPRESS",
+					"loadBalancePartitionAttribute": "",
+					"loadBalanceStatus": "LOAD_BALANCE_NOT_CONFIGURED",
+					"loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+					"name": "",
+					"selectedRelationships": "success",
+					"source": {
+						"groupId": "1abd5cab-a264-3a51-0000-000000000000",
+						"id": "a6802ce0-e10a-3d59-0000-000000000000",
+						"type": "PROCESSOR",
+						"versionedComponentId": "6d190ab8-d30a-3b8f-a56d-1bb4c7e1c053"
+					},
+					"zIndex": "0"
+				},
+				{
+					"id": "35e5755c-6176-3ed3-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"versionedComponentId": "2c687f0f-a5a1-339a-8c3a-63614c70b437",
+					"backPressureDataSizeThreshold": "1 GB",
+					"backPressureObjectThreshold": "10000",
+					"destination": {
+						"groupId": "1abd5cab-a264-3a51-0000-000000000000",
+						"id": "bc9094a6-7aa3-3cfd-0000-000000000000",
+						"type": "FUNNEL",
+						"versionedComponentId": "00c785e4-db07-3e25-8be9-a9789082bda6"
+					},
+					"flowFileExpiration": "0 sec",
+					"labelIndex": "1",
+					"loadBalanceCompression": "DO_NOT_COMPRESS",
+					"loadBalancePartitionAttribute": "",
+					"loadBalanceStatus": "LOAD_BALANCE_NOT_CONFIGURED",
+					"loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+					"name": "",
+					"selectedRelationships": "failure",
+					"source": {
+						"groupId": "1abd5cab-a264-3a51-0000-000000000000",
+						"id": "17205f49-e4d3-3439-0000-000000000000",
+						"type": "PROCESSOR",
+						"versionedComponentId": "42ffb181-fe1d-34fd-a8ca-9f31f8c323d6"
+					},
+					"zIndex": "0"
+				},
+				{
+					"id": "42ef4ae8-cd58-3307-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"versionedComponentId": "fd651d86-5861-3fbd-a3f9-7fe788f2e446",
+					"backPressureDataSizeThreshold": "1 GB",
+					"backPressureObjectThreshold": "10000",
+					"destination": {
+						"groupId": "1abd5cab-a264-3a51-0000-000000000000",
+						"id": "a6802ce0-e10a-3d59-0000-000000000000",
+						"type": "PROCESSOR",
+						"versionedComponentId": "6d190ab8-d30a-3b8f-a56d-1bb4c7e1c053"
+					},
+					"flowFileExpiration": "0 sec",
+					"labelIndex": "1",
+					"loadBalanceCompression": "DO_NOT_COMPRESS",
+					"loadBalancePartitionAttribute": "",
+					"loadBalanceStatus": "LOAD_BALANCE_NOT_CONFIGURED",
+					"loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+					"name": "",
+					"selectedRelationships": "Response",
+					"source": {
+						"groupId": "1abd5cab-a264-3a51-0000-000000000000",
+						"id": "2f0d76b4-3de2-39b0-0000-000000000000",
+						"type": "PROCESSOR",
+						"versionedComponentId": "14531e3e-d1c1-38f6-9161-a9ecdeabb69f"
+					},
+					"zIndex": "0"
+				}
+			],
+			"funnels": [
+				{
+					"id": "9afbb0e7-ee65-3487-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"position": {
+						"x": "1184.0",
+						"y": "400.0"
+					},
+					"versionedComponentId": "38f0acb5-768f-3093-856b-d546f5146f50"
+				},
+				{
+					"id": "bc9094a6-7aa3-3cfd-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"position": {
+						"x": "1224.0",
+						"y": "880.0"
+					},
+					"versionedComponentId": "00c785e4-db07-3e25-8be9-a9789082bda6"
+				}
+			],
+			"labels": [
+				{
+					"id": "0171a460-32f5-3851-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"position": {
+						"x": "8.0",
+						"y": "136.0"
+					},
+					"versionedComponentId": "0ecf28ce-5bc6-38f8-928b-3f771b8d1781",
+					"height": "184.0",
+					"label": "Step 2 – Set Parameters\nCreate parameters in your Parameter Context (Right Click in canvas and select Parameters):\n\nDOWNLOAD FILE URL = Raw GitHub URL to a small CSV\n\nFILENAME = name of the file (e.g. sample.csv)\n\nHDFS WRITE DIRECTORY = directory in HDFS (e.g. /tmp)\n\nUSER = output of the command `whoami` on your Google VM",
+					"style": {
+						"entry": [
+							{
+								"key": "background-color",
+								"value": "#d6f4ff"
+							},
+							{
+								"key": "font-size",
+								"value": "14px"
+							}
+						]
+					},
+					"width": "608.0",
+					"zIndex": "0"
+				},
+				{
+					"id": "08c2ca6a-f939-3da0-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"position": {
+						"x": "0.0",
+						"y": "1168.0"
+					},
+					"versionedComponentId": "44a844cf-3fac-3647-bb1c-70b0f4586bfa",
+					"height": "112.0",
+					"label": "Step 7 – Stop NiFi\n\nRun: ./nifi.sh stop\nInside: nifi-1.25.0/bin",
+					"style": {
+						"entry": [
+							{
+								"key": "background-color",
+								"value": "#ffd4f1"
+							},
+							{
+								"key": "font-size",
+								"value": "14px"
+							}
+						]
+					},
+					"width": "608.0",
+					"zIndex": "0"
+				},
+				{
+					"id": "60e2e0e6-6497-317d-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"position": {
+						"x": "8.0",
+						"y": "0.0"
+					},
+					"versionedComponentId": "35156e3d-14c5-3424-ab7e-60fd6d33c83b",
+					"height": "112.0",
+					"label": "Step 1 – Start Hadoop Containers\n\nRun: docker-compose up -d \nInside: hadoop-hive-spark-hbase\nWait: For HDFS User Interface to Load",
+					"style": {
+						"entry": [
+							{
+								"key": "background-color",
+								"value": "#d4ffef"
+							},
+							{
+								"key": "font-size",
+								"value": "14px"
+							}
+						]
+					},
+					"width": "608.0",
+					"zIndex": "0"
+				},
+				{
+					"id": "886fbe78-9410-3be1-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"position": {
+						"x": "8.0",
+						"y": "360.0"
+					},
+					"versionedComponentId": "950e185d-c392-3461-9769-8f4a7a8979eb",
+					"height": "152.0",
+					"label": "Step 3 – Run Download File (Invoke HTTP) \n\nRight click and Run-Once \nor \nRight click -> Start\n\nOptional Configure Timer:\nRight click -> configure -> scheduling is set to run every 30 seconds",
+					"style": {
+						"entry": {
+							"key": "font-size",
+							"value": "14px"
+						}
+					},
+					"width": "488.0",
+					"zIndex": "0"
+				},
+				{
+					"id": "8d622b57-6ce4-302c-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"position": {
+						"x": "0.0",
+						"y": "616.0"
+					},
+					"versionedComponentId": "c0468835-a68f-397b-8330-bb302efeef4b",
+					"height": "128.0",
+					"label": "Step 4 – Run Update FileName (Update Attribute) \n\nThis will rename your file to the parameter FILENAME in the parameter context",
+					"style": {
+						"entry": {
+							"key": "font-size",
+							"value": "14px"
+						}
+					},
+					"width": "520.0",
+					"zIndex": "0"
+				},
+				{
+					"id": "e07f5764-6bab-36f2-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"position": {
+						"x": "0.0",
+						"y": "824.0"
+					},
+					"versionedComponentId": "dbdc34d5-0767-35a0-a5c3-840dcd2c10b7",
+					"height": "128.0",
+					"label": "Step 5 – Run Write File to HDFS (PutHDFS)\n\nThis will write your data to the hdfs folder HDFS_WRITE_DIRECTORY\nin the parameter context\n\nIt will use the core-site.xml config for hdfs in the USER parameter directory",
+					"style": {
+						"entry": {
+							"key": "font-size",
+							"value": "14px"
+						}
+					},
+					"width": "520.0",
+					"zIndex": "0"
+				},
+				{
+					"id": "e9723beb-13e5-34dd-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"position": {
+						"x": "0.0",
+						"y": "992.0"
+					},
+					"versionedComponentId": "f3862bf9-d2dd-386a-8b7b-ffaed450a0e2",
+					"height": "152.0",
+					"label": "Step 6 - Validate File Load\n\nInside the master docker container run:\n\nhdfs dfs -ls <HDFS WRITE DIRECTORY>\n\nfor example, if HDFS_WRITE_DIRECTORY was /tmp the command would be:\nhdfs dfs -ls /tmp",
+					"style": {
+						"entry": [
+							{
+								"key": "background-color",
+								"value": "#d6f4ff"
+							},
+							{
+								"key": "font-size",
+								"value": "14px"
+							}
+						]
+					},
+					"width": "608.0",
+					"zIndex": "0"
+				}
+			],
+			"processors": [
+				{
+					"id": "17205f49-e4d3-3439-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"position": {
+						"x": "548.0",
+						"y": "832.0"
+					},
+					"versionedComponentId": "42ffb181-fe1d-34fd-a8ca-9f31f8c323d6",
+					"bundle": {
+						"artifact": "nifi-hadoop-nar",
+						"group": "org.apache.nifi",
+						"version": "1.25.0"
+					},
+					"config": {
+						"backoffMechanism": "PENALIZE_FLOWFILE",
+						"bulletinLevel": "WARN",
+						"comments": "",
+						"concurrentlySchedulableTaskCount": "1",
+						"descriptors": {
+							"entry": [
+								{
+									"key": "Hadoop Configuration Resources",
+									"value": {
+										"name": "Hadoop Configuration Resources"
+									}
+								},
+								{
+									"key": "kerberos-credentials-service",
+									"value": {
+										"identifiesControllerService": "org.apache.nifi.kerberos.KerberosCredentialsService",
+										"name": "kerberos-credentials-service"
+									}
+								},
+								{
+									"key": "kerberos-user-service",
+									"value": {
+										"identifiesControllerService": "org.apache.nifi.kerberos.KerberosUserService",
+										"name": "kerberos-user-service"
+									}
+								},
+								{
+									"key": "Kerberos Principal",
+									"value": {
+										"name": "Kerberos Principal"
+									}
+								},
+								{
+									"key": "Kerberos Keytab",
+									"value": {
+										"name": "Kerberos Keytab"
+									}
+								},
+								{
+									"key": "Kerberos Password",
+									"value": {
+										"name": "Kerberos Password"
+									}
+								},
+								{
+									"key": "Kerberos Relogin Period",
+									"value": {
+										"name": "Kerberos Relogin Period"
+									}
+								},
+								{
+									"key": "Additional Classpath Resources",
+									"value": {
+										"name": "Additional Classpath Resources"
+									}
+								},
+								{
+									"key": "Directory",
+									"value": {
+										"name": "Directory"
+									}
+								},
+								{
+									"key": "Conflict Resolution Strategy",
+									"value": {
+										"name": "Conflict Resolution Strategy"
+									}
+								},
+								{
+									"key": "writing-strategy",
+									"value": {
+										"name": "writing-strategy"
+									}
+								},
+								{
+									"key": "Block Size",
+									"value": {
+										"name": "Block Size"
+									}
+								},
+								{
+									"key": "IO Buffer Size",
+									"value": {
+										"name": "IO Buffer Size"
+									}
+								},
+								{
+									"key": "Replication",
+									"value": {
+										"name": "Replication"
+									}
+								},
+								{
+									"key": "Permissions umask",
+									"value": {
+										"name": "Permissions umask"
+									}
+								},
+								{
+									"key": "Remote Owner",
+									"value": {
+										"name": "Remote Owner"
+									}
+								},
+								{
+									"key": "Remote Group",
+									"value": {
+										"name": "Remote Group"
+									}
+								},
+								{
+									"key": "Compression codec",
+									"value": {
+										"name": "Compression codec"
+									}
+								},
+								{
+									"key": "Ignore Locality",
+									"value": {
+										"name": "Ignore Locality"
+									}
+								}
+							]
+						},
+						"executionNode": "ALL",
+						"lossTolerant": "false",
+						"maxBackoffPeriod": "10 mins",
+						"penaltyDuration": "30 sec",
+						"properties": {
+							"entry": [
+								{
+									"key": "Hadoop Configuration Resources",
+									"value": "/home/#{USER}/dsc650-infra/bellevue-bigdata/nifi/hadoopconf/core-site.xml"
+								},
+								{
+									"key": "kerberos-credentials-service"
+								},
+								{
+									"key": "kerberos-user-service"
+								},
+								{
+									"key": "Kerberos Principal"
+								},
+								{
+									"key": "Kerberos Keytab"
+								},
+								{
+									"key": "Kerberos Password"
+								},
+								{
+									"key": "Kerberos Relogin Period",
+									"value": "4 hours"
+								},
+								{
+									"key": "Additional Classpath Resources"
+								},
+								{
+									"key": "Directory",
+									"value": "#{HDFS WRITE DIRECTORY}"
+								},
+								{
+									"key": "Conflict Resolution Strategy",
+									"value": "fail"
+								},
+								{
+									"key": "writing-strategy",
+									"value": "writeAndRename"
+								},
+								{
+									"key": "Block Size"
+								},
+								{
+									"key": "IO Buffer Size"
+								},
+								{
+									"key": "Replication"
+								},
+								{
+									"key": "Permissions umask"
+								},
+								{
+									"key": "Remote Owner"
+								},
+								{
+									"key": "Remote Group"
+								},
+								{
+									"key": "Compression codec",
+									"value": "NONE"
+								},
+								{
+									"key": "Ignore Locality",
+									"value": "false"
+								}
+							]
+						},
+						"retryCount": "10",
+						"runDurationMillis": "0",
+						"schedulingPeriod": "0 sec",
+						"schedulingStrategy": "TIMER_DRIVEN",
+						"yieldDuration": "1 sec"
+					},
+					"executionNodeRestricted": "false",
+					"name": "Write File to HDFS",
+					"relationships": [
+						{
+							"autoTerminate": "false",
+							"name": "failure",
+							"retry": "false"
+						},
+						{
+							"autoTerminate": "true",
+							"name": "success",
+							"retry": "false"
+						}
+					],
+					"state": "STOPPED",
+					"style": "",
+					"type": "org.apache.nifi.processors.hadoop.PutHDFS"
+				},
+				{
+					"id": "2f0d76b4-3de2-39b0-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"position": {
+						"x": "548.0",
+						"y": "368.0"
+					},
+					"versionedComponentId": "14531e3e-d1c1-38f6-9161-a9ecdeabb69f",
+					"bundle": {
+						"artifact": "nifi-standard-nar",
+						"group": "org.apache.nifi",
+						"version": "1.25.0"
+					},
+					"config": {
+						"backoffMechanism": "PENALIZE_FLOWFILE",
+						"bulletinLevel": "WARN",
+						"comments": "",
+						"concurrentlySchedulableTaskCount": "1",
+						"descriptors": {
+							"entry": [
+								{
+									"key": "HTTP Method",
+									"value": {
+										"name": "HTTP Method"
+									}
+								},
+								{
+									"key": "Remote URL",
+									"value": {
+										"name": "Remote URL"
+									}
+								},
+								{
+									"key": "disable-http2",
+									"value": {
+										"name": "disable-http2"
+									}
+								},
+								{
+									"key": "SSL Context Service",
+									"value": {
+										"identifiesControllerService": "org.apache.nifi.ssl.SSLContextService",
+										"name": "SSL Context Service"
+									}
+								},
+								{
+									"key": "Connection Timeout",
+									"value": {
+										"name": "Connection Timeout"
+									}
+								},
+								{
+									"key": "Read Timeout",
+									"value": {
+										"name": "Read Timeout"
+									}
+								},
+								{
+									"key": "Socket Write Timeout",
+									"value": {
+										"name": "Socket Write Timeout"
+									}
+								},
+								{
+									"key": "idle-timeout",
+									"value": {
+										"name": "idle-timeout"
+									}
+								},
+								{
+									"key": "max-idle-connections",
+									"value": {
+										"name": "max-idle-connections"
+									}
+								},
+								{
+									"key": "proxy-configuration-service",
+									"value": {
+										"identifiesControllerService": "org.apache.nifi.proxy.ProxyConfigurationService",
+										"name": "proxy-configuration-service"
+									}
+								},
+								{
+									"key": "Proxy Host",
+									"value": {
+										"name": "Proxy Host"
+									}
+								},
+								{
+									"key": "Proxy Port",
+									"value": {
+										"dependencies": {
+											"propertyName": "Proxy Host"
+										},
+										"name": "Proxy Port"
+									}
+								},
+								{
+									"key": "Proxy Type",
+									"value": {
+										"dependencies": {
+											"propertyName": "Proxy Host"
+										},
+										"name": "Proxy Type"
+									}
+								},
+								{
+									"key": "invokehttp-proxy-user",
+									"value": {
+										"dependencies": {
+											"propertyName": "Proxy Host"
+										},
+										"name": "invokehttp-proxy-user"
+									}
+								},
+								{
+									"key": "invokehttp-proxy-password",
+									"value": {
+										"dependencies": {
+											"propertyName": "Proxy Host"
+										},
+										"name": "invokehttp-proxy-password"
+									}
+								},
+								{
+									"key": "oauth2-access-token-provider",
+									"value": {
+										"identifiesControllerService": "org.apache.nifi.oauth2.OAuth2AccessTokenProvider",
+										"name": "oauth2-access-token-provider"
+									}
+								},
+								{
+									"key": "Basic Authentication Username",
+									"value": {
+										"name": "Basic Authentication Username"
+									}
+								},
+								{
+									"key": "Basic Authentication Password",
+									"value": {
+										"name": "Basic Authentication Password"
+									}
+								},
+								{
+									"key": "Digest Authentication",
+									"value": {
+										"dependencies": {
+											"propertyName": "Basic Authentication Username"
+										},
+										"name": "Digest Authentication"
+									}
+								},
+								{
+									"key": "Penalize on \"No Retry\"",
+									"value": {
+										"name": "Penalize on \"No Retry\""
+									}
+								},
+								{
+									"key": "send-message-body",
+									"value": {
+										"dependencies": {
+											"dependentValues": [
+												"POST",
+												"PATCH",
+												"PUT"
+											],
+											"propertyName": "HTTP Method"
+										},
+										"name": "send-message-body"
+									}
+								},
+								{
+									"key": "form-body-form-name",
+									"value": {
+										"dependencies": {
+											"dependentValues": "true",
+											"propertyName": "send-message-body"
+										},
+										"name": "form-body-form-name"
+									}
+								},
+								{
+									"key": "set-form-filename",
+									"value": {
+										"dependencies": {
+											"propertyName": "form-body-form-name"
+										},
+										"name": "set-form-filename"
+									}
+								},
+								{
+									"key": "Use Chunked Encoding",
+									"value": {
+										"dependencies": {
+											"dependentValues": [
+												"POST",
+												"PATCH",
+												"PUT"
+											],
+											"propertyName": "HTTP Method"
+										},
+										"name": "Use Chunked Encoding"
+									}
+								},
+								{
+									"key": "Content-Encoding",
+									"value": {
+										"dependencies": {
+											"dependentValues": [
+												"POST",
+												"PATCH",
+												"PUT"
+											],
+											"propertyName": "HTTP Method"
+										},
+										"name": "Content-Encoding"
+									}
+								},
+								{
+									"key": "Content-Type",
+									"value": {
+										"dependencies": {
+											"dependentValues": [
+												"POST",
+												"PATCH",
+												"PUT"
+											],
+											"propertyName": "HTTP Method"
+										},
+										"name": "Content-Type"
+									}
+								},
+								{
+									"key": "Include Date Header",
+									"value": {
+										"name": "Include Date Header"
+									}
+								},
+								{
+									"key": "Attributes to Send",
+									"value": {
+										"name": "Attributes to Send"
+									}
+								},
+								{
+									"key": "Useragent",
+									"value": {
+										"name": "Useragent"
+									}
+								},
+								{
+									"key": "Put Response Body In Attribute",
+									"value": {
+										"name": "Put Response Body In Attribute"
+									}
+								},
+								{
+									"key": "Max Length To Put In Attribute",
+									"value": {
+										"dependencies": {
+											"propertyName": "Put Response Body In Attribute"
+										},
+										"name": "Max Length To Put In Attribute"
+									}
+								},
+								{
+									"key": "ignore-response-content",
+									"value": {
+										"name": "ignore-response-content"
+									}
+								},
+								{
+									"key": "use-etag",
+									"value": {
+										"name": "use-etag"
+									}
+								},
+								{
+									"key": "etag-max-cache-size",
+									"value": {
+										"dependencies": {
+											"dependentValues": "true",
+											"propertyName": "use-etag"
+										},
+										"name": "etag-max-cache-size"
+									}
+								},
+								{
+									"key": "cookie-strategy",
+									"value": {
+										"name": "cookie-strategy"
+									}
+								},
+								{
+									"key": "Always Output Response",
+									"value": {
+										"name": "Always Output Response"
+									}
+								},
+								{
+									"key": "flow-file-naming-strategy",
+									"value": {
+										"name": "flow-file-naming-strategy"
+									}
+								},
+								{
+									"key": "Add Response Headers to Request",
+									"value": {
+										"name": "Add Response Headers to Request"
+									}
+								},
+								{
+									"key": "Follow Redirects",
+									"value": {
+										"name": "Follow Redirects"
+									}
+								}
+							]
+						},
+						"executionNode": "ALL",
+						"lossTolerant": "false",
+						"maxBackoffPeriod": "10 mins",
+						"penaltyDuration": "30 sec",
+						"properties": {
+							"entry": [
+								{
+									"key": "HTTP Method",
+									"value": "GET"
+								},
+								{
+									"key": "Remote URL",
+									"value": "#{DOWNLOAD FILE URL}"
+								},
+								{
+									"key": "disable-http2",
+									"value": "False"
+								},
+								{
+									"key": "SSL Context Service"
+								},
+								{
+									"key": "Connection Timeout",
+									"value": "5 secs"
+								},
+								{
+									"key": "Read Timeout",
+									"value": "15 secs"
+								},
+								{
+									"key": "Socket Write Timeout",
+									"value": "15 secs"
+								},
+								{
+									"key": "idle-timeout",
+									"value": "5 mins"
+								},
+								{
+									"key": "max-idle-connections",
+									"value": "5"
+								},
+								{
+									"key": "proxy-configuration-service"
+								},
+								{
+									"key": "Proxy Host"
+								},
+								{
+									"key": "Proxy Port"
+								},
+								{
+									"key": "Proxy Type",
+									"value": "http"
+								},
+								{
+									"key": "invokehttp-proxy-user"
+								},
+								{
+									"key": "invokehttp-proxy-password"
+								},
+								{
+									"key": "oauth2-access-token-provider"
+								},
+								{
+									"key": "Basic Authentication Username"
+								},
+								{
+									"key": "Basic Authentication Password"
+								},
+								{
+									"key": "Digest Authentication",
+									"value": "false"
+								},
+								{
+									"key": "Penalize on \"No Retry\"",
+									"value": "false"
+								},
+								{
+									"key": "send-message-body",
+									"value": "true"
+								},
+								{
+									"key": "form-body-form-name"
+								},
+								{
+									"key": "set-form-filename",
+									"value": "true"
+								},
+								{
+									"key": "Use Chunked Encoding",
+									"value": "false"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "DISABLED"
+								},
+								{
+									"key": "Content-Type",
+									"value": "${mime.type}"
+								},
+								{
+									"key": "Include Date Header",
+									"value": "True"
+								},
+								{
+									"key": "Attributes to Send"
+								},
+								{
+									"key": "Useragent"
+								},
+								{
+									"key": "Put Response Body In Attribute"
+								},
+								{
+									"key": "Max Length To Put In Attribute",
+									"value": "256"
+								},
+								{
+									"key": "ignore-response-content",
+									"value": "false"
+								},
+								{
+									"key": "use-etag",
+									"value": "false"
+								},
+								{
+									"key": "etag-max-cache-size",
+									"value": "10MB"
+								},
+								{
+									"key": "cookie-strategy",
+									"value": "DISABLED"
+								},
+								{
+									"key": "Always Output Response",
+									"value": "false"
+								},
+								{
+									"key": "flow-file-naming-strategy",
+									"value": "RANDOM"
+								},
+								{
+									"key": "Add Response Headers to Request",
+									"value": "false"
+								},
+								{
+									"key": "Follow Redirects",
+									"value": "True"
+								}
+							]
+						},
+						"retryCount": "10",
+						"runDurationMillis": "0",
+						"schedulingPeriod": "60 sec",
+						"schedulingStrategy": "TIMER_DRIVEN",
+						"yieldDuration": "1 sec"
+					},
+					"executionNodeRestricted": "false",
+					"name": "Download File",
+					"relationships": [
+						{
+							"autoTerminate": "false",
+							"name": "Failure",
+							"retry": "false"
+						},
+						{
+							"autoTerminate": "false",
+							"name": "No Retry",
+							"retry": "false"
+						},
+						{
+							"autoTerminate": "true",
+							"name": "Original",
+							"retry": "false"
+						},
+						{
+							"autoTerminate": "false",
+							"name": "Response",
+							"retry": "false"
+						},
+						{
+							"autoTerminate": "false",
+							"name": "Retry",
+							"retry": "false"
+						}
+					],
+					"state": "STOPPED",
+					"style": "",
+					"type": "org.apache.nifi.processors.standard.InvokeHTTP"
+				},
+				{
+					"id": "a6802ce0-e10a-3d59-0000-000000000000",
+					"parentGroupId": "1abd5cab-a264-3a51-0000-000000000000",
+					"position": {
+						"x": "548.0",
+						"y": "616.0"
+					},
+					"versionedComponentId": "6d190ab8-d30a-3b8f-a56d-1bb4c7e1c053",
+					"bundle": {
+						"artifact": "nifi-update-attribute-nar",
+						"group": "org.apache.nifi",
+						"version": "1.25.0"
+					},
+					"config": {
+						"backoffMechanism": "PENALIZE_FLOWFILE",
+						"bulletinLevel": "WARN",
+						"comments": "",
+						"concurrentlySchedulableTaskCount": "1",
+						"descriptors": {
+							"entry": [
+								{
+									"key": "Delete Attributes Expression",
+									"value": {
+										"name": "Delete Attributes Expression"
+									}
+								},
+								{
+									"key": "Store State",
+									"value": {
+										"name": "Store State"
+									}
+								},
+								{
+									"key": "Stateful Variables Initial Value",
+									"value": {
+										"name": "Stateful Variables Initial Value"
+									}
+								},
+								{
+									"key": "canonical-value-lookup-cache-size",
+									"value": {
+										"name": "canonical-value-lookup-cache-size"
+									}
+								},
+								{
+									"key": "filename",
+									"value": {
+										"name": "filename"
+									}
+								}
+							]
+						},
+						"executionNode": "ALL",
+						"lossTolerant": "false",
+						"maxBackoffPeriod": "10 mins",
+						"penaltyDuration": "30 sec",
+						"properties": {
+							"entry": [
+								{
+									"key": "Delete Attributes Expression"
+								},
+								{
+									"key": "Store State",
+									"value": "Do not store state"
+								},
+								{
+									"key": "Stateful Variables Initial Value"
+								},
+								{
+									"key": "canonical-value-lookup-cache-size",
+									"value": "100"
+								},
+								{
+									"key": "filename",
+									"value": "#{FILENAME}"
+								}
+							]
+						},
+						"retryCount": "10",
+						"runDurationMillis": "25",
+						"schedulingPeriod": "0 sec",
+						"schedulingStrategy": "TIMER_DRIVEN",
+						"yieldDuration": "1 sec"
+					},
+					"executionNodeRestricted": "false",
+					"name": "Update File Name",
+					"relationships": {
+						"autoTerminate": "false",
+						"name": "success",
+						"retry": "false"
+					},
+					"state": "STOPPED",
+					"style": "",
+					"type": "org.apache.nifi.processors.attributes.UpdateAttribute"
+				}
+			]
+		},
+		"timestamp": "08/23/2026 15:21:54 UTC",
+		"_encoding-version": "1.3"
+	}
 }
