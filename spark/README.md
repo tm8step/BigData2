@@ -6,7 +6,7 @@ Apache Spark MLlib provides the distributed processing and machine learning laye
 
 ## Hive Input
 
-**Hive table:** `[Enter Hive table name]`
+**Hive table:** `econdata_ilwi`
 
 Explain what data Spark reads from Hive and which fields are used by the machine learning workflow.
 
@@ -25,7 +25,7 @@ Examples may include:
 
 ## MLlib Algorithm
 
-**Algorithm:** `[Enter algorithm]`
+**Algorithm:** `Linear Regression`
 
 Explain:
 
