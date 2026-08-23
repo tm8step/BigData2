@@ -64,6 +64,7 @@ spark-submit \
 Briefly describe the successful execution and any important log or output information.
 
 ![Spark Submit Output](screenshots/spark-submit-output.png)
+![Spark Submit Log](screenshots/spark-submit-logs.png)
 
 ## HBase Output
 
