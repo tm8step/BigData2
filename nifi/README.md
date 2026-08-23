@@ -7,9 +7,12 @@ Apache NiFi provides the ingestion and orchestration layer for this project. The
 ## Source Dataset
 
 **Dataset:** [econdata_ilwi.csv]  
-**GitHub direct URL:** [Enter the direct/raw GitHub URL used by the NiFi HTTP processor]
+**GitHub direct URL:** [https://raw.githubusercontent.com/tm8step/BigData2/refs/heads/main/sample-data/econdata_ilwi.csv]
 
-Briefly describe what the dataset contains and why it was selected.
+The data contains economic data for 174 counties across Illinois and Wisconsin.
+
+It has 3 id columns:  'case_id' INT, 'state_abv' STR and 'county' STR
+It has 5 economic descriptive indicators, 'housing' FLOAT, 'total_cost' FLOAT, 'min_wage' FLOAT, 'taxes' FLOAT and 'metro_level' INT
 
 ## Flow Design
 
