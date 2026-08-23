@@ -51,6 +51,8 @@ R^2:  0.9952 - This shows that over 99.5% of the variation in the data is explai
 
 ### Model Evaluation
 
+This shows the output being written to HBAse
+
 ![Spark ML Evaluation](screenshots/spark-ml-evaluation.png)
 
 ## Spark Submit / YARN Execution
