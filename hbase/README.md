@@ -12,9 +12,9 @@ The HBase table is created before the Spark job runs, verified with an empty sca
 **Row key:** `case_id`  
 **Column family/families:** `cf`
 
-The case_id is a unique 3 or 4 digit number.  It is generated from the full list of counties in the US in alphabetical order 'State-County'.  This data only includes 2 states from that data to reduce resource costs.
+The Row key column is 'case_id', it is a unique 3 or 4 digit number.  It is generated from the full list of counties in the US in alphabetical order 'State-County'.  This data only includes 2 states from that data to reduce resource costs.
 
-The column family is cf.  Since this data is relatively small, it is recommended to keep only 1 column family, which I did.
+The column family is 'cf'.  Since this data is relatively small, it is recommended to keep only 1 column family, which I did.
 
 ## HBase Commands
 
