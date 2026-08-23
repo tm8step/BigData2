@@ -1,6 +1,6 @@
 -- This is the SQL code used to create and load the table into Hive.  It is launched from inside Hive.
 
-CREATE TABLE econdata_ilwi(
+CREATE EXTERNAL TABLE econdata_ilwi(
 `case_id` INT,
 `state_abv` STRING,
 `county` STRING,
